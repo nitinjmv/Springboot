@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8sbpostgres
+spec:
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+      nodePort: 30200
+  selector:
+    app: k8sbpostgres
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8sbpostgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8sbpostgres
+  template:
+    metadata:
+      labels:
+        app: k8sbpostgres
+    spec:
+      containers:
+        - image: nitinjmv/k8sbpostgres
+          name: k8sbpostgres
+          ports:
+            - containerPort: 8080
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: db_host
+            - name: POSTGRES_DB
+              valueFrom:
+                configMapKeyRef:
+                  name: postgres-config
+                  key: db_name
+            - name: POSTGRES_USER  # Setting Database username from Secret
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials # Secret Name
+                  key: postgres_user
+            - name: POSTGRES_PASSWORD # Setting Database password from Secret
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: postgres_password

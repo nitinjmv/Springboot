@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  sbloadjson:
+    container_name: sbloadjson_container
+    image: sbloadjson
+    build: ./
+    ports:
+      - "8080:8080"
