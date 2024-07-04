@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.jmv</groupId>
-    <artifactId>springboot-samples</artifactId>
+    <artifactId>Springboot</artifactId>
     <version>${app.version}</version>
     <packaging>pom</packaging>
 
