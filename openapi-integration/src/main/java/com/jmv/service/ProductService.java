@@ -1,7 +1,7 @@
-package com.example.sbswagger.service;
+package com.jmv.service;
 
-import com.example.sbswagger.entity.Product;
-import com.example.sbswagger.repository.ProductRepository;
+import com.jmv.entity.Product;
+import com.jmv.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

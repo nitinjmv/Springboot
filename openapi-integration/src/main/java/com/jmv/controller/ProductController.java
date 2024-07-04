@@ -1,7 +1,7 @@
-package com.example.sbswagger.controller;
+package com.jmv.controller;
 
-import com.example.sbswagger.entity.Product;
-import com.example.sbswagger.service.ProductService;
+import com.jmv.entity.Product;
+import com.jmv.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

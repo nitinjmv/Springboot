@@ -1,4 +1,4 @@
-package com.example.sbswagger.controller;
+package com.jmv.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

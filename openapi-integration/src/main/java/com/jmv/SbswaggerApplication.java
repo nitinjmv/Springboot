@@ -1,9 +1,8 @@
-package com.example.sbswagger;
+package com.jmv;
 
-import com.example.sbswagger.entity.Product;
-import com.example.sbswagger.repository.ProductRepository;
+import com.jmv.entity.Product;
+import com.jmv.repository.ProductRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
-import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

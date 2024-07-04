@@ -1,4 +1,4 @@
-package com.example.sbswagger.entity;
+package com.jmv.entity;
 
 import lombok.*;
 
