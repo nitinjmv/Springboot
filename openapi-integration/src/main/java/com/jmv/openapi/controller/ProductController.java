@@ -1,7 +1,7 @@
-package com.jmv.controller;
+package com.jmv.openapi.controller;
 
-import com.jmv.entity.Product;
-import com.jmv.service.ProductService;
+import com.jmv.openapi.entity.Product;
+import com.jmv.openapi.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

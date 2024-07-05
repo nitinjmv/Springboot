@@ -1,7 +1,7 @@
-package com.jmv;
+package com.jmv.openapi;
 
-import com.jmv.entity.Product;
-import com.jmv.repository.ProductRepository;
+import com.jmv.openapi.entity.Product;
+import com.jmv.openapi.repository.ProductRepository;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,13 +12,13 @@ import java.util.Arrays;
 
 @OpenAPIDefinition
 @SpringBootApplication
-public class SbswaggerApplication implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
     @Autowired
     private ProductRepository productRepository;
 
     public static void main(String[] args) {
-        SpringApplication.run(SbswaggerApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Override

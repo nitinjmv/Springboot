@@ -1,6 +1,6 @@
-package com.jmv.repository;
+package com.jmv.openapi.repository;
 
-import com.jmv.entity.Product;
+import com.jmv.openapi.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

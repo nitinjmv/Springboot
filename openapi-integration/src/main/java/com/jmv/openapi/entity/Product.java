@@ -1,4 +1,4 @@
-package com.jmv.entity;
+package com.jmv.openapi.entity;
 
 import lombok.*;
 

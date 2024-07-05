@@ -1,7 +1,7 @@
-package com.jmv.service;
+package com.jmv.openapi.service;
 
-import com.jmv.entity.Product;
-import com.jmv.repository.ProductRepository;
+import com.jmv.openapi.entity.Product;
+import com.jmv.openapi.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

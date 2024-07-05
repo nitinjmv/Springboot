@@ -1,10 +1,10 @@
-package com.jmv;
+package com.jmv.load;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SbswaggerApplicationTests {
+class SbloadsqlschemaApplicationTests {
 
     @Test
     void contextLoads() {
