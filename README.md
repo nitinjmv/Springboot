@@ -1,1 +1,0 @@
-A Folder containing all Springboot related sample projects.
