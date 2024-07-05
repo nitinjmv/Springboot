@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: sbk8shelloworld
+  labels:
+    name: sbk8shelloworld
+spec:
+  ports:
+    - nodePort: 30020
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: sbk8shelloworld
+  type: NodePort
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sbk8shelloworld
+spec:
+  selector:
+    matchLabels:
+      app: sbk8shelloworld
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: sbk8shelloworld
+    spec:
+      containers:
+        - name: sbk8shelloworld
+          image: nitinjmv/sbk8shelloworld
+          ports:
+            - containerPort: 8080
