@@ -1,7 +1,7 @@
-package com.example.sbk8shelloworld.service;
+package dev.jmv.hello.service;
 
-import com.example.sbk8shelloworld.entity.Product;
-import com.example.sbk8shelloworld.repository.ProductRepository;
+import dev.jmv.hello.entity.Product;
+import dev.jmv.hello.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

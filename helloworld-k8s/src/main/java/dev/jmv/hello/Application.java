@@ -1,4 +1,4 @@
-package com.example.sbk8shelloworld;
+package dev.jmv.hello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

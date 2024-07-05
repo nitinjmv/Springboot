@@ -1,7 +1,7 @@
-package com.example.sbk8shelloworld.controller;
+package dev.jmv.hello.controller;
 
-import com.example.sbk8shelloworld.entity.Product;
-import com.example.sbk8shelloworld.service.ProductService;
+import dev.jmv.hello.entity.Product;
+import dev.jmv.hello.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

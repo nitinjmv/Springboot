@@ -1,4 +1,4 @@
-package com.example.sbk8shelloworld.entity;
+package dev.jmv.hello.entity;
 
 import lombok.Data;
 
