@@ -1,3 +1,5 @@
+https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/
+
 # Demo of ORM Mappings
 
 ## Tech stack
@@ -19,6 +21,8 @@
 
 ## Mappings
 
+One-to-One 
+
 ### In a user's journey context.
 
 - One-to-One
@@ -38,11 +42,6 @@
 - Many-to-Many
 
   Many products can be part of Many Categories
-
-  Just by adding @ManytoMany in both entity classes would create two following extra mapping tables. So there will be four tables in total.
-
-  - PRODUCT_CATEGORIES
-  - CATEGORY_PRODUCTS
 
 ## Run
 
