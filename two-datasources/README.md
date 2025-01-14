@@ -1,11 +1,31 @@
-`make restart`
-This will create databases containers & run the application.
+Run the Application: This will create databases containers & run the application.
+- `make restart`
+
+Verify
+- `http://localhost:9191/actuator/health`
+
+Test the application: Import this postman collection.
+- `two-datasources.postman_collection.json`
+
+#### Endpoints to operate on MySql
+    /my/accounts <br>
+    POST: /bulkUpload -> upload accounts from data.sql <br>
+    POST: / -> add one account <br> 
+    GET: -> / list of accounts <br>
+    GET: -> /{id} get accounts by id <br>
+    DELETE: /{id} -> delete by id <br>
+    DELETE: /cleanup -> delete all
+
+#### Endpoints to operate on PG
+    /pg/accounts <br>    
+    POST: / -> add one account <br>
+    GET: -> / list of accounts <br>
+    GET: -> /{id} get accounts by id <br>
+    DELETE: /{id} -> delete by id <br>
+    DELETE: /cleanup -> delete all
 
 
-`make down`
-
-http://localhost:9191/actuator/health
-
+# Outdated
 ## Run MySQL & Postgres in Docker
 <hr>
 
@@ -50,36 +70,3 @@ mysql`
 - `show databases`
 - `use accounts`
 
-<hr>
-
-### Application
-
-#### Endpoints to operate on MySql
-    /my/accounts <br>
-    POST: /bulkUpload -> upload accounts from data.sql <br>
-    POST: / -> add one account <br> 
-    GET: -> / list of accounts <br>
-    GET: -> /{id} get accounts by id <br>
-    DELETE: /{id} -> delete by id <br>
-    DELETE: /cleanup -> delete all
-
-
-#### Endpoints to operate on PG
-    /pg/accounts <br>    
-    POST: / -> add one account <br>
-    GET: -> / list of accounts <br>
-    GET: -> /{id} get accounts by id <br>
-    DELETE: /{id} -> delete by id <br>
-    DELETE: /cleanup -> delete all
-
-
-#### Batch Job
-Row by row operation
-- Read data from MySql  
-- Call another API to encrypt the account_number  
-- Insert into PG
-
-In Chuck (500 records)
-- Read data from MySql
-- Call another API to encrypt the account_number
-- Insert into PG
