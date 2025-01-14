@@ -14,14 +14,14 @@ import org.springframework.core.io.Resource;
 import java.util.List;
 
 @SpringBootApplication
-public class SbloadjsonApplication implements CommandLineRunner{
+public class Application implements CommandLineRunner{
     @Value("classpath:data/employees.json")
     Resource resource;
     @Autowired
     private EmployeeRepository repository;
 
     public static void main(String[] args) {
-        SpringApplication.run(SbloadjsonApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @Override
