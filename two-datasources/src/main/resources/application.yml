@@ -1,0 +1,24 @@
+server:
+  port: 9191
+
+# Spring maps these settings (spring.datasource) to an instance of org.springframework.boot.autoconfigure.jdbc.DataSourceProperties.
+spring:
+  application:
+    name: two-datasources
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    pg:
+      url: jdbc:postgresql://localhost:5432/pg_account?autoReconnect=true
+      username: root
+      password: root
+      driver-class-name: org.postgresql.Driver
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    sql:
+      url: jdbc:mysql://localhost:3306/sql_account?autoReconnect=true
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      database-platform: org.hibernate.dialect.MySQLDialect
+
