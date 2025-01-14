@@ -37,15 +37,15 @@ public class SqlAccountController {
         return ResponseEntity.ok(accountService.createAccount(account));
     }
 
-    @DeleteMapping
+    @DeleteMapping("{id}")
     public ResponseEntity<Void> deleteAccountById(Long id) {
         accountService.deleteAccountById(id);
         return ResponseEntity.noContent().build();
     }
 
-//    @DeleteMapping
-//    public ResponseEntity<Void> deleteAll() {
-//        accountService.deleteAll();
-//        return ResponseEntity.noContent().build();
-//    }
+    @DeleteMapping
+    public ResponseEntity<Void> deleteAll() {
+        accountService.deleteAll();
+        return ResponseEntity.noContent().build();
+    }
 }

@@ -12,3 +12,4 @@ start:
 stop:
 	echo "stopping.."
 	docker-compose down
+	timeout 5
