@@ -3,8 +3,7 @@ package dev.jmv.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Table(name = "account_details")
+@Entity(name = "ACCOUNT_DETAILS")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,8 +12,8 @@ import lombok.*;
 public class AccountDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long account_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
     private String account_number;
 

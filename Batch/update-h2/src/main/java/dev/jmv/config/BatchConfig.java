@@ -7,9 +7,9 @@ import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.job.builder.JobBuilder;
+import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.data.RepositoryItemReader;
 import org.springframework.batch.item.data.RepositoryItemWriter;
 import org.springframework.context.annotation.Bean;
@@ -21,20 +21,21 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
-@EnableBatchProcessing
 @RequiredArgsConstructor
 public class BatchConfig {
 
     private final AccountDetailsRepository accountDetailsRepository;
 
+    @Bean
     public Job job(JobRepository jobRepository, Step updateH2) {
-        return new JobBuilder("data-manipulation", jobRepository)
+        return new JobBuilder("data-migration", jobRepository)
+                .incrementer(new RunIdIncrementer())
                 .start(updateH2)
                 .build();
     }
 
     @Bean
-    public Step readCSV(JobRepository jobRepository, DataSourceTransactionManager transactionManager) {
+    public Step updateH2(JobRepository jobRepository, DataSourceTransactionManager transactionManager) {
         return new StepBuilder("updateH2", jobRepository)
                 .<AccountDetails, AccountDetails>chunk(10, transactionManager)
                 .reader(reader())
