@@ -4,6 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+**/mvn**
+**.mvn*.*
+
 ### STS ###
 .apt_generated
 .classpath
@@ -28,11 +31,3 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
-### VS Code ###
-.vscode/
-/ai-test/.idea/
-/ai-test/.mvn/
-/ai-test/HELP.md
-/ai-test/mvnw
-/ai-test/mvnw.cmd
