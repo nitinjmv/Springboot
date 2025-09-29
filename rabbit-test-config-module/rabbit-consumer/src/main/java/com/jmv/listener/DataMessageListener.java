@@ -23,7 +23,7 @@ public class DataMessageListener {
         }
     }
 
-    @RabbitListener(queues = DataQueueConfig.DATA_DLQ)
+    /*@RabbitListener(queues = DataQueueConfig.DATA_DLQ)
     public void handleDataDlq(MsgDTO msg) {
         System.out.println("DATA DLQ received: " + msg);
         if (isMalformed(msg)) {
@@ -33,7 +33,7 @@ public class DataMessageListener {
             rabbitTemplate.convertAndSend("", DataQueueConfig.DATA_PARKING, msg);
             System.out.println("Sent to DATA PARKING queue");
         }
-    }
+    }*/
 
     private boolean isMalformed(MsgDTO msg) {
         return msg.getId() == null || msg.getName() == null;
